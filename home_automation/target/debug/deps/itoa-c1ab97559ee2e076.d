@@ -1,8 +1,8 @@
-/home/lucogds/UnB/UnB_2024-1_LP_Projeto/target/debug/deps/libitoa-c1ab97559ee2e076.rmeta: /home/lucogds/.cargo/registry/src/index.crates.io-6f17d22bba15001f/itoa-1.0.11/src/lib.rs /home/lucogds/.cargo/registry/src/index.crates.io-6f17d22bba15001f/itoa-1.0.11/src/udiv128.rs
+/home/lucogds/UnB/UnB_2024-1_LP_Projeto/home_automation/target/debug/deps/libitoa-c1ab97559ee2e076.rmeta: /home/lucogds/.cargo/registry/src/index.crates.io-6f17d22bba15001f/itoa-1.0.11/src/lib.rs /home/lucogds/.cargo/registry/src/index.crates.io-6f17d22bba15001f/itoa-1.0.11/src/udiv128.rs
 
-/home/lucogds/UnB/UnB_2024-1_LP_Projeto/target/debug/deps/libitoa-c1ab97559ee2e076.rlib: /home/lucogds/.cargo/registry/src/index.crates.io-6f17d22bba15001f/itoa-1.0.11/src/lib.rs /home/lucogds/.cargo/registry/src/index.crates.io-6f17d22bba15001f/itoa-1.0.11/src/udiv128.rs
+/home/lucogds/UnB/UnB_2024-1_LP_Projeto/home_automation/target/debug/deps/libitoa-c1ab97559ee2e076.rlib: /home/lucogds/.cargo/registry/src/index.crates.io-6f17d22bba15001f/itoa-1.0.11/src/lib.rs /home/lucogds/.cargo/registry/src/index.crates.io-6f17d22bba15001f/itoa-1.0.11/src/udiv128.rs
 
-/home/lucogds/UnB/UnB_2024-1_LP_Projeto/target/debug/deps/itoa-c1ab97559ee2e076.d: /home/lucogds/.cargo/registry/src/index.crates.io-6f17d22bba15001f/itoa-1.0.11/src/lib.rs /home/lucogds/.cargo/registry/src/index.crates.io-6f17d22bba15001f/itoa-1.0.11/src/udiv128.rs
+/home/lucogds/UnB/UnB_2024-1_LP_Projeto/home_automation/target/debug/deps/itoa-c1ab97559ee2e076.d: /home/lucogds/.cargo/registry/src/index.crates.io-6f17d22bba15001f/itoa-1.0.11/src/lib.rs /home/lucogds/.cargo/registry/src/index.crates.io-6f17d22bba15001f/itoa-1.0.11/src/udiv128.rs
 
 /home/lucogds/.cargo/registry/src/index.crates.io-6f17d22bba15001f/itoa-1.0.11/src/lib.rs:
 /home/lucogds/.cargo/registry/src/index.crates.io-6f17d22bba15001f/itoa-1.0.11/src/udiv128.rs:

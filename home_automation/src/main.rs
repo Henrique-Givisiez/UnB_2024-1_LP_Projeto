@@ -1,16 +1,22 @@
-use actix_web::{App, HttpServer, middleware, web};
+// Framework para aplicação web. Fornece um servidor HTTP que irá lidar com as rotas, middlewares e entre outros
+// https://actix.rs/docs
+use actix_web::{App, HttpServer, middleware, web}; 
+// Biblioteca para carregar variáveis de ambiente (URL da database por exemplo) de um arquivo .env para o ambiente de execução da aplicação
+// https://crates.io/crates/dotenv
 use dotenv::dotenv;
+// Biblioteca padrão do Rust para acessar variáveis de ambiente diretamento do sitema operacional ou contêiner
+// https://doc.rust-lang.org/nightly/std/env/index.html
 use std::env;
-use diesel::r2d2::{self, ConnectionManager};
-use diesel::pg::PgConnection;
 
+#[macro_use]
+extern crate diesel;
+
+mod schema;
 mod handlers;
 mod models;
 mod routes;
 mod database;
 mod controllers;
-
-type DbPool = r2d2::Pool<ConnectionManager<PgConnection>>;
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
@@ -20,12 +26,8 @@ async fn main() -> std::io::Result<()> {
 
     // Obtém variáveis de ambiente
     let database_url = env::var("DATABASE_URL").expect("DATABASE_URL não está definida no arquivo .env");
-
-    // Cria o gerenciador de conexão do banco de dados
-    let manager = ConnectionManager::<PgConnection>::new(database_url);
-    let pool = r2d2::Pool::builder()
-        .build(manager)
-        .expect("Falha ao criar pool de conexões");
+    // Cria a pool de conexões
+    let pool = database::establish_connection(&database_url);
 
     // Inicializa o servidor Actix
     HttpServer::new(move || {
