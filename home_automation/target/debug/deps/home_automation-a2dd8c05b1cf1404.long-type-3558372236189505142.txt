@@ -1,0 +1,1 @@
+InsertStatement<schema::devices::table, ValuesClause<(ColumnInsertValue<schema::devices::columns::id, &std::string::String>, ColumnInsertValue<schema::devices::columns::status, diesel::expression::bound::Bound<Text, &std::string::String>>), schema::devices::table>>

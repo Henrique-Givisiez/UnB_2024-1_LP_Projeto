@@ -1,0 +1,1 @@
+fn(Data<Pool<ConnectionManager<diesel::PgConnection>>>, actix_web::web::Json<{type error}>) -> impl std::future::Future<Output = impl Responder> {update_device_data}

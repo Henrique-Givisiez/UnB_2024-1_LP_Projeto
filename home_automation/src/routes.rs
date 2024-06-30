@@ -1,6 +1,6 @@
 // Importações necessárias do framework Actix-web e dos manipuladores (handlers) definidos localmente
 use actix_web::web;
-use crate::handlers::{get_status, update_device_data, login_user, create_user};
+use crate::handlers::{create_device, create_user, get_status, login_user, update_device_data};
 
 // Função que inicializa e configura as rotas para o serviço web
 pub fn init_routes(cfg: &mut web::ServiceConfig) {
@@ -10,9 +10,14 @@ pub fn init_routes(cfg: &mut web::ServiceConfig) {
         web::resource("/status") // Define o caminho do recurso
             .route(web::get().to(get_status)) // Mapeia a rota GET para a função `get_status`
     )
-    // Configura o endpoint `/update` para responder a requisições POST
+    // Configura o endpoint `/create_device` para responder a requisições POST
     .service(
-        web::resource("/update") // Define o caminho do recurso
+        web::resource("create_device")
+        .route(web::post().to(create_device))
+    )
+    // Configura o endpoint `/update_device` para responder a requisições POST
+    .service(
+        web::resource("/update_device") // Define o caminho do recurso
             .route(web::post().to(update_device_data)) // Mapeia a rota POST para a função `update_device_data`
     )
     // Configura o endpoint `/login` para responder a requisições POST
